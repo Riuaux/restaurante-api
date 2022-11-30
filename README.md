@@ -42,10 +42,36 @@
    docker-compose up -d
    ```
 
-6. [ ToDo ]
+6. Ingresar el primer User directo en la DB
 
    ```
-   { code }
+   {
+      "_id": {
+         "$oid": "636d388883a44912fba8e3a2"
+      },
+      "authCode": "3333",
+      "username": "RIUAUX",
+      "password": "$2b$07$jqT/HlcEwnG4FlWlOnaRQO7zechGVeqd6jJEVe9MJ6/DMwyiaR9y.",
+      "firstName": "Agustín",
+      "lastName": "Camarena González",
+      "phoneNumber": "3485933208",
+      "role": "admin",
+      "isActive": true,
+      "createdAt": {
+         "$date": {
+            "$numberLong": "1665151440666"
+         }
+      },
+      "updatedAt": {
+         "$date": {
+            "$numberLong": "1668701556110"
+         }
+      },
+      "updatedBy": {
+         "$oid": "636d388883a44912fba8e3a2"
+      },
+      "__v": 0
+   }
    ```
 
 7. Iniciar el servidor en Dev
@@ -54,11 +80,15 @@
    yarn start:dev
    ```
 
-8. Abrir el [Apollo Sandbox](https://localhost:3000/graphql)
+8. Abrir el [Apollo Sandbox](https://localhost:3003/graphql)
 
    ```
-   https://localhost:3000/graphql
+   https://localhost:3003/graphql
    ```
+
+<br />
+
+Hay que iniciar una sesión para las acciones que requieran un Token. Desde la _mutation_ "Login", se usa un _authCode_ de cualquier usuario creado en el Seed, y la contraseña por defecto es _`321321`_.
 
 <br />
 <hr />
