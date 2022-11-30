@@ -1,8 +1,9 @@
-# *.ps1
+*.ps1
 /docker-mongo
 .env
 /src/*.gql
 **/node_modules
+LICENSE
 
 # compiled output
 /dist
