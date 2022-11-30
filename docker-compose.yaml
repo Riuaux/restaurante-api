@@ -1,0 +1,10 @@
+version: '3'
+services:
+  db:
+    image: mongo:6.0
+    restart: unless-stopped
+    ports:
+      - '27019:27017'
+    container_name: restaurante-container
+    volumes:
+      - ./docker-mongo/restaurante-db:/var/lib/mongo/data/restaurante-db
